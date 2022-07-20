@@ -1,0 +1,110 @@
+2022-05-02-16:28:23.343 INFO [main]-org.springframework.boot.StartupInfoLogger:55>>Starting ApiTest using Java 1.8.0_302 on DESKTOP-QBTMJA4 with PID 11952 (started by 粟小蓬 in E:\AllJava\sgmall\api)
+2022-05-02-16:28:23.345 INFO [main]-org.springframework.boot.SpringApplication:659>>No active profile set, falling back to default profiles: default
+2022-05-02-16:28:24.290 INFO [main]-org.springframework.data.repository.config.RepositoryConfigurationDelegate:262>>Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-05-02-16:28:24.292 INFO [main]-org.springframework.data.repository.config.RepositoryConfigurationDelegate:132>>Bootstrapping Spring Data Elasticsearch repositories in DEFAULT mode.
+2022-05-02-16:28:24.320 INFO [main]-org.springframework.data.repository.config.RepositoryConfigurationDelegate:201>>Finished Spring Data repository scanning in 23 ms. Found 0 Elasticsearch repository interfaces.
+2022-05-02-16:28:24.322 INFO [main]-org.springframework.data.repository.config.RepositoryConfigurationDelegate:262>>Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-05-02-16:28:24.322 INFO [main]-org.springframework.data.repository.config.RepositoryConfigurationDelegate:132>>Bootstrapping Spring Data Reactive Elasticsearch repositories in DEFAULT mode.
+2022-05-02-16:28:24.330 INFO [main]-org.springframework.data.repository.config.RepositoryConfigurationDelegate:201>>Finished Spring Data repository scanning in 5 ms. Found 0 Reactive Elasticsearch repository interfaces.
+2022-05-02-16:28:24.343 INFO [main]-org.springframework.data.repository.config.RepositoryConfigurationDelegate:262>>Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-05-02-16:28:24.343 INFO [main]-org.springframework.data.repository.config.RepositoryConfigurationDelegate:132>>Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-05-02-16:28:24.353 INFO [main]-org.springframework.data.repository.config.RepositoryConfigurationDelegate:201>>Finished Spring Data repository scanning in 8 ms. Found 0 Redis repository interfaces.
+2022-05-02-16:28:24.468 WARN [main]-org.mybatis.logging.Logger:44>>No MyBatis mapper was found in '[com.sxp]' package. Please check your configuration.
+2022-05-02-16:28:26.348 INFO [main]-com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure:56>>Init DruidDataSource
+2022-05-02-16:28:26.517 INFO [main]-com.alibaba.druid.pool.DruidDataSource:998>>{dataSource-1} inited
+2022-05-02-16:28:27.977 INFO [main]-org.redisson.Version:41>>Redisson 3.12.0
+2022-05-02-16:28:28.754 INFO [redisson-netty-4-15]-org.redisson.connection.pool.ConnectionPool$1:168>>1 connections initialized for 47.113.202.125/47.113.202.125:6379
+2022-05-02-16:28:28.788 INFO [redisson-netty-4-19]-org.redisson.connection.pool.ConnectionPool$1:168>>24 connections initialized for 47.113.202.125/47.113.202.125:6379
+2022-05-02-16:28:29.518 INFO [main]-springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping:69>>Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2022-05-02-16:28:30.111 INFO [main]-tk.mybatis.mapper.autoconfigure.MapperCacheDisabler:60>>Clear tk.mybatis.mapper.util.MsUtil CLASS_CACHE cache.
+2022-05-02-16:28:30.113 INFO [main]-tk.mybatis.mapper.autoconfigure.MapperCacheDisabler:60>>Clear tk.mybatis.mapper.genid.GenIdUtil CACHE cache.
+2022-05-02-16:28:30.113 INFO [main]-tk.mybatis.mapper.autoconfigure.MapperCacheDisabler:60>>Clear tk.mybatis.mapper.version.VersionUtil CACHE cache.
+2022-05-02-16:28:30.113 INFO [main]-tk.mybatis.mapper.autoconfigure.MapperCacheDisabler:83>>Clear EntityHelper entityTableMap cache.
+2022-05-02-16:28:30.750 INFO [main]-org.springframework.data.elasticsearch.support.VersionInfo:62>>Version Spring Data Elasticsearch: 4.2.1
+2022-05-02-16:28:30.758 INFO [main]-org.springframework.data.elasticsearch.support.VersionInfo:63>>Version Elasticsearch Client in build: 7.12.1
+2022-05-02-16:28:30.758 INFO [main]-org.springframework.data.elasticsearch.support.VersionInfo:64>>Version Elasticsearch Client used: 7.12.1
+2022-05-02-16:28:30.758 INFO [main]-org.springframework.data.elasticsearch.support.VersionInfo:72>>Version Elasticsearch cluster: 7.6.1
+2022-05-02-16:28:30.758 WARN [main]-org.springframework.data.elasticsearch.support.VersionInfo:75>>Version mismatch in between Elasticsearch Client and Cluster: 7.12.1 - 7.6.1
+2022-05-02-16:28:31.957 INFO [main]-org.quartz.impl.StdSchedulerFactory:1220>>Using default implementation for ThreadExecutor
+2022-05-02-16:28:31.972 INFO [main]-org.quartz.core.SchedulerSignalerImpl:61>>Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2022-05-02-16:28:31.972 INFO [main]-org.quartz.core.QuartzScheduler:229>>Quartz Scheduler v.2.3.2 created.
+2022-05-02-16:28:31.972 INFO [main]-org.quartz.simpl.RAMJobStore:155>>RAMJobStore initialized.
+2022-05-02-16:28:31.972 INFO [main]-org.quartz.core.QuartzScheduler:294>>Scheduler meta-data: Quartz Scheduler (v2.3.2) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2022-05-02-16:28:31.972 INFO [main]-org.quartz.impl.StdSchedulerFactory:1374>>Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+2022-05-02-16:28:31.972 INFO [main]-org.quartz.impl.StdSchedulerFactory:1378>>Quartz scheduler version: 2.3.2
+2022-05-02-16:28:31.972 INFO [main]-org.quartz.core.QuartzScheduler:2293>>JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@3c20e9d6
+2022-05-02-16:28:32.041 INFO [main]-springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper:160>>Context refreshed
+2022-05-02-16:28:32.057 INFO [main]-springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper:163>>Found 1 custom documentation plugin(s)
+2022-05-02-16:28:32.101 INFO [main]-springfox.documentation.spring.web.scanners.ApiListingReferenceScanner:41>>Scanning for api listing references
+2022-05-02-16:28:32.284 INFO [main]-org.springframework.scheduling.quartz.SchedulerFactoryBean:727>>Starting Quartz Scheduler now
+2022-05-02-16:28:32.284 INFO [main]-org.quartz.core.QuartzScheduler:547>>Scheduler quartzScheduler_$_NON_CLUSTERED started.
+2022-05-02-16:28:32.294 INFO [main]-org.springframework.boot.StartupInfoLogger:61>>Started ApiTest in 9.437 seconds (JVM running for 10.242)
+2022-05-02-16:28:36.765 INFO [SpringApplicationShutdownHook]-org.quartz.core.QuartzScheduler:585>>Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2022-05-02-16:28:36.781 INFO [SpringApplicationShutdownHook]-org.springframework.scheduling.quartz.SchedulerFactoryBean:845>>Shutting down Quartz Scheduler
+2022-05-02-16:28:36.781 INFO [SpringApplicationShutdownHook]-org.quartz.core.QuartzScheduler:666>>Scheduler quartzScheduler_$_NON_CLUSTERED shutting down.
+2022-05-02-16:28:36.781 INFO [SpringApplicationShutdownHook]-org.quartz.core.QuartzScheduler:585>>Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2022-05-02-16:28:36.781 INFO [SpringApplicationShutdownHook]-org.quartz.core.QuartzScheduler:740>>Scheduler quartzScheduler_$_NON_CLUSTERED shutdown complete.
+2022-05-02-16:28:36.921 INFO [SpringApplicationShutdownHook]-com.alibaba.druid.pool.DruidDataSource:2071>>{dataSource-1} closing ...
+2022-05-02-16:28:36.921 INFO [SpringApplicationShutdownHook]-com.alibaba.druid.pool.DruidDataSource:2144>>{dataSource-1} closed
+2022-05-02-16:29:07.797 INFO [main]-org.springframework.boot.StartupInfoLogger:55>>Starting ApiTest using Java 1.8.0_302 on DESKTOP-QBTMJA4 with PID 620 (started by 粟小蓬 in E:\AllJava\sgmall\api)
+2022-05-02-16:29:07.797 INFO [main]-org.springframework.boot.SpringApplication:659>>No active profile set, falling back to default profiles: default
+2022-05-02-16:29:08.687 INFO [main]-org.springframework.data.repository.config.RepositoryConfigurationDelegate:262>>Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-05-02-16:29:08.689 INFO [main]-org.springframework.data.repository.config.RepositoryConfigurationDelegate:132>>Bootstrapping Spring Data Elasticsearch repositories in DEFAULT mode.
+2022-05-02-16:29:08.710 INFO [main]-org.springframework.data.repository.config.RepositoryConfigurationDelegate:201>>Finished Spring Data repository scanning in 20 ms. Found 0 Elasticsearch repository interfaces.
+2022-05-02-16:29:08.718 INFO [main]-org.springframework.data.repository.config.RepositoryConfigurationDelegate:262>>Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-05-02-16:29:08.718 INFO [main]-org.springframework.data.repository.config.RepositoryConfigurationDelegate:132>>Bootstrapping Spring Data Reactive Elasticsearch repositories in DEFAULT mode.
+2022-05-02-16:29:08.720 INFO [main]-org.springframework.data.repository.config.RepositoryConfigurationDelegate:201>>Finished Spring Data repository scanning in 5 ms. Found 0 Reactive Elasticsearch repository interfaces.
+2022-05-02-16:29:08.730 INFO [main]-org.springframework.data.repository.config.RepositoryConfigurationDelegate:262>>Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-05-02-16:29:08.730 INFO [main]-org.springframework.data.repository.config.RepositoryConfigurationDelegate:132>>Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-05-02-16:29:08.740 INFO [main]-org.springframework.data.repository.config.RepositoryConfigurationDelegate:201>>Finished Spring Data repository scanning in 5 ms. Found 0 Redis repository interfaces.
+2022-05-02-16:29:08.860 WARN [main]-org.mybatis.logging.Logger:44>>No MyBatis mapper was found in '[com.sxp]' package. Please check your configuration.
+2022-05-02-16:29:10.711 INFO [main]-com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure:56>>Init DruidDataSource
+2022-05-02-16:29:10.862 INFO [main]-com.alibaba.druid.pool.DruidDataSource:998>>{dataSource-1} inited
+2022-05-02-16:29:12.191 INFO [main]-org.redisson.Version:41>>Redisson 3.12.0
+2022-05-02-16:29:12.980 INFO [redisson-netty-4-27]-org.redisson.connection.pool.ConnectionPool$1:168>>1 connections initialized for 47.113.202.125/47.113.202.125:6379
+2022-05-02-16:29:13.002 INFO [redisson-netty-4-19]-org.redisson.connection.pool.ConnectionPool$1:168>>24 connections initialized for 47.113.202.125/47.113.202.125:6379
+2022-05-02-16:29:13.752 INFO [main]-springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping:69>>Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2022-05-02-16:29:14.360 INFO [main]-tk.mybatis.mapper.autoconfigure.MapperCacheDisabler:60>>Clear tk.mybatis.mapper.util.MsUtil CLASS_CACHE cache.
+2022-05-02-16:29:14.360 INFO [main]-tk.mybatis.mapper.autoconfigure.MapperCacheDisabler:60>>Clear tk.mybatis.mapper.genid.GenIdUtil CACHE cache.
+2022-05-02-16:29:14.360 INFO [main]-tk.mybatis.mapper.autoconfigure.MapperCacheDisabler:60>>Clear tk.mybatis.mapper.version.VersionUtil CACHE cache.
+2022-05-02-16:29:14.360 INFO [main]-tk.mybatis.mapper.autoconfigure.MapperCacheDisabler:83>>Clear EntityHelper entityTableMap cache.
+2022-05-02-16:29:15.018 INFO [main]-org.springframework.data.elasticsearch.support.VersionInfo:62>>Version Spring Data Elasticsearch: 4.2.1
+2022-05-02-16:29:15.018 INFO [main]-org.springframework.data.elasticsearch.support.VersionInfo:63>>Version Elasticsearch Client in build: 7.12.1
+2022-05-02-16:29:15.018 INFO [main]-org.springframework.data.elasticsearch.support.VersionInfo:64>>Version Elasticsearch Client used: 7.12.1
+2022-05-02-16:29:15.018 INFO [main]-org.springframework.data.elasticsearch.support.VersionInfo:72>>Version Elasticsearch cluster: 7.6.1
+2022-05-02-16:29:15.018 WARN [main]-org.springframework.data.elasticsearch.support.VersionInfo:75>>Version mismatch in between Elasticsearch Client and Cluster: 7.12.1 - 7.6.1
+2022-05-02-16:29:16.582 INFO [main]-org.quartz.impl.StdSchedulerFactory:1220>>Using default implementation for ThreadExecutor
+2022-05-02-16:29:16.598 INFO [main]-org.quartz.core.SchedulerSignalerImpl:61>>Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2022-05-02-16:29:16.598 INFO [main]-org.quartz.core.QuartzScheduler:229>>Quartz Scheduler v.2.3.2 created.
+2022-05-02-16:29:16.598 INFO [main]-org.quartz.simpl.RAMJobStore:155>>RAMJobStore initialized.
+2022-05-02-16:29:16.598 INFO [main]-org.quartz.core.QuartzScheduler:294>>Scheduler meta-data: Quartz Scheduler (v2.3.2) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2022-05-02-16:29:16.598 INFO [main]-org.quartz.impl.StdSchedulerFactory:1374>>Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+2022-05-02-16:29:16.598 INFO [main]-org.quartz.impl.StdSchedulerFactory:1378>>Quartz scheduler version: 2.3.2
+2022-05-02-16:29:16.598 INFO [main]-org.quartz.core.QuartzScheduler:2293>>JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@3c20e9d6
+2022-05-02-16:29:16.683 INFO [main]-springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper:160>>Context refreshed
+2022-05-02-16:29:16.704 INFO [main]-springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper:163>>Found 1 custom documentation plugin(s)
+2022-05-02-16:29:16.734 INFO [main]-springfox.documentation.spring.web.scanners.ApiListingReferenceScanner:41>>Scanning for api listing references
+2022-05-02-16:29:16.916 INFO [main]-org.springframework.scheduling.quartz.SchedulerFactoryBean:727>>Starting Quartz Scheduler now
+2022-05-02-16:29:16.916 INFO [main]-org.quartz.core.QuartzScheduler:547>>Scheduler quartzScheduler_$_NON_CLUSTERED started.
+2022-05-02-16:29:16.926 INFO [main]-org.springframework.boot.StartupInfoLogger:61>>Started ApiTest in 9.547 seconds (JVM running for 10.349)
+2022-05-02-16:29:22.226 INFO [SpringApplicationShutdownHook]-org.quartz.core.QuartzScheduler:585>>Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2022-05-02-16:29:22.228 INFO [SpringApplicationShutdownHook]-org.springframework.scheduling.quartz.SchedulerFactoryBean:845>>Shutting down Quartz Scheduler
+2022-05-02-16:29:22.228 INFO [SpringApplicationShutdownHook]-org.quartz.core.QuartzScheduler:666>>Scheduler quartzScheduler_$_NON_CLUSTERED shutting down.
+2022-05-02-16:29:22.228 INFO [SpringApplicationShutdownHook]-org.quartz.core.QuartzScheduler:585>>Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2022-05-02-16:29:22.230 INFO [SpringApplicationShutdownHook]-org.quartz.core.QuartzScheduler:740>>Scheduler quartzScheduler_$_NON_CLUSTERED shutdown complete.
+2022-05-02-16:29:22.395 INFO [SpringApplicationShutdownHook]-com.alibaba.druid.pool.DruidDataSource:2071>>{dataSource-1} closing ...
+2022-05-02-16:29:22.411 INFO [SpringApplicationShutdownHook]-com.alibaba.druid.pool.DruidDataSource:2144>>{dataSource-1} closed

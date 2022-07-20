@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.sxp.dao.ShoppingCartMapper">
+  <resultMap id="BaseResultMap" type="com.sxp.entity.ShoppingCart">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="cart_id" jdbcType="INTEGER" property="cartId" />
+    <result column="product_id" jdbcType="VARCHAR" property="productId" />
+    <result column="sku_id" jdbcType="VARCHAR" property="skuId" />
+    <result column="user_id" jdbcType="VARCHAR" property="userId" />
+    <result column="cart_num" jdbcType="VARCHAR" property="cartNum" />
+    <result column="cart_time" jdbcType="VARCHAR" property="cartTime" />
+    <result column="product_price" jdbcType="DECIMAL" property="productPrice" />
+    <result column="sku_props" jdbcType="VARCHAR" property="skuProps" />
+  </resultMap>
+
+  <resultMap id="ShoppingCartVo2Map" type="com.sxp.entity.ShoppingCartVo2">
+    <id column="cart_id" jdbcType="INTEGER" property="cartId" />
+    <result column="product_id" jdbcType="VARCHAR" property="productId" />
+    <result column="sku_id" jdbcType="VARCHAR" property="skuId" />
+    <result column="user_id" jdbcType="VARCHAR" property="userId" />
+    <result column="cart_num" jdbcType="VARCHAR" property="cartNum" />
+    <result column="cart_time" jdbcType="VARCHAR" property="cartTime" />
+    <result column="product_price" jdbcType="DECIMAL" property="productPrice" />
+    <result column="sku_props" jdbcType="VARCHAR" property="skuProps" />
+
+    <result column="product_name" jdbcType="VARCHAR" property="productName" />
+    <result column="url" jdbcType="VARCHAR" property="productImg" />
+
+    <result column="sku_name" jdbcType="VARCHAR" property="skuName" />
+    <result column="stock" jdbcType="INTEGER" property="stock" />
+
+    <result column="sell_price" jdbcType="INTEGER" property="sellPrice" />
+    <result column="original_price" jdbcType="INTEGER" property="originalPrice" />
+
+  </resultMap>
+
+  <select id="selectShoppingCartByUserId" resultMap="ShoppingCartVo2Map">
+    select
+      s.cart_id,
+      s.product_id,
+      s.sku_id,
+      s.user_id,
+      s.cart_num,
+      s.cart_time,
+      s.product_price,
+      s.sku_props,
+      p.product_name,
+      i.url,
+      k.original_price,
+      k.sell_price,
+      k.sku_name
+    from shopping_cart s
+           inner join product p
+                      on s.product_id=p.product_id
+           inner join product_sku k
+                      on k.sku_id=s.sku_id
+           inner join product_img i
+                      on i.item_id=p.product_id
+    where i.is_main=1 and s.user_id=#{userId};
+  </select>
+
+  <select id="selectShopCartByCartIds" resultMap="ShoppingCartVo2Map">
+    select
+      s.cart_id,
+      s.product_id,
+      s.sku_id,
+      s.user_id,
+      s.cart_num,
+      s.cart_time,
+      s.product_price,
+      s.sku_props,
+      p.product_name,
+      i.url,
+      k.stock,
+      k.original_price,
+      k.sell_price,
+      k.sku_name
+    from shopping_cart s
+           inner join product p
+                      on s.product_id=p.product_id
+           inner join product_sku k
+                      on k.sku_id=s.sku_id
+           inner join product_img i
+                      on i.item_id=p.product_id
+    where i.is_main=1 and s.cart_id in
+      <foreach collection="cartIds" item="cartId" close=")" open="(" index="index" separator=",">
+        #{cartId}
+      </foreach>
+  </select>
+
+  <update id="updateNumById">
+    update shopping_cart set cart_num=#{cartNum} where cart_id=#{cartId};
+  </update>
+</mapper>

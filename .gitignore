@@ -1,0 +1,11 @@
+# Project exclude paths
+/api-user-login/target/
+/api-user-regist/target/
+/config-server/target/
+/eureka-server/target/
+/mapper/target/
+/service/target/
+/tx-manager/target/
+/user-check/target/
+/user-save/target/
+/zipkin/target/

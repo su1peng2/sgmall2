@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.sxp.dao.ProductMapper">
+  <resultMap id="BaseResultMap" type="com.sxp.entity.ProductVo">
+    <id column="product_id" jdbcType="VARCHAR" property="productId" />
+    <result column="product_name" jdbcType="VARCHAR" property="productName" />
+    <result column="category_id" jdbcType="INTEGER" property="categoryId" />
+    <result column="root_category_id" jdbcType="INTEGER" property="rootCategoryId" />
+    <result column="sold_num" jdbcType="INTEGER" property="soldNum" />
+    <result column="product_status" jdbcType="INTEGER" property="productStatus" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="update_time" jdbcType="TIMESTAMP" property="updateTime" />
+    <result column="content" jdbcType="LONGVARCHAR" property="content" />
+    <collection property="imgList" select="com.sxp.dao.ProductImgMapper.selectImgById" column="product_id"></collection>
+  </resultMap>
+
+  <resultMap id="BaseResultMap2" type="com.sxp.entity.ProductVo2">
+    <id column="product_id" jdbcType="VARCHAR" property="productId" />
+    <result column="product_name" jdbcType="VARCHAR" property="productName" />
+    <result column="category_id" jdbcType="INTEGER" property="categoryId" />
+    <result column="root_category_id" jdbcType="INTEGER" property="rootCategoryId" />
+    <result column="sold_num" jdbcType="INTEGER" property="soldNum" />
+    <result column="product_status" jdbcType="INTEGER" property="productStatus" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="update_time" jdbcType="TIMESTAMP" property="updateTime" />
+    <result column="content" jdbcType="LONGVARCHAR" property="content" />
+    <collection property="imgList" select="com.sxp.dao.ProductImgMapper.selectImgById" column="product_id"></collection>
+    <collection property="productSkuList" select="com.sxp.dao.ProductSkuMapper.selectLowerByProductId" column="product_id"></collection>
+  </resultMap>
+  <select id="selectProduct" resultMap="BaseResultMap">
+    select
+      product_id,
+      product_name,
+      category_id,
+      root_category_id,
+      sold_num,
+      product_status,
+      content,
+      create_time,
+      update_time
+    from product p
+    order by create_time desc limit 0,3;
+  </select>
+
+  <select id="selectByCategoryId" resultMap="BaseResultMap">
+    select
+      product_id,
+      product_name,
+      category_id,
+      root_category_id,
+      sold_num,
+      product_status,
+      content,
+      create_time,
+      update_time
+    from product
+    where root_category_id=#{categoryId}
+    order by sold_num
+            desc limit 0,6;
+  </select>
+
+  <select id="selectAllByCategory" resultMap="BaseResultMap2">
+    select
+      product_id,
+      product_name,
+      category_id,
+      root_category_id,
+      sold_num,
+      product_status,
+      content,
+      create_time,
+      update_time
+    from product
+    where category_id=#{categoryId}
+    order by sold_num
+            desc limit #{start},#{limit};
+  </select>
+
+  <select id="selectProductAll" resultMap="BaseResultMap2">
+    select
+      product_id,
+      product_name,
+      category_id,
+      root_category_id,
+      sold_num,
+      product_status,
+      content,
+      create_time,
+      update_time
+    from product
+  </select>
+
+  <select id="selectProductByKeyword" resultMap="BaseResultMap2">
+    select
+      product_id,
+      product_name,
+      category_id,
+      root_category_id,
+      sold_num,
+      product_status,
+      content,
+      create_time,
+      update_time
+    from product
+    where product_name like '%${keyword}%'
+    order by sold_num
+            desc limit #{start},#{limit};
+  </select>
+
+  <select id="selectBrandByCategory" resultSets="java.util.List" resultType="String">
+    select distinct brand from product_params
+    where product_id
+            in (select product_id from product where category_id=#{categoryId});
+  </select>
+
+  <select id="selectBrandByKeyword" resultSets="java.util.List" resultType="String">
+    select distinct brand from product_params
+    where product_id
+            in (select product_id from product where product_name like '%${keyword}%');
+  </select>
+
+</mapper>

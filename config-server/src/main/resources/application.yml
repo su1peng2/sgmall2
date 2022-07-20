@@ -1,0 +1,19 @@
+server:
+  port: 8888
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        git:
+          default-label: master
+          uri: https://gitee.com/xiaopengsu/sagomall-config.git
+          search-paths: files
+          username: 3186885766@qq.com
+          password: iytuP9J:7hmwj7V
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://root:123@192.168.189.1:8761/eureka

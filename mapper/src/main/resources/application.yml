@@ -1,0 +1,28 @@
+spring:
+  elasticsearch:
+    rest:
+      uris: http://47.113.202.125:9200
+  datasource:
+    druid:
+      driver-class-name: com.mysql.jdbc.Driver
+      url: jdbc:mysql://47.113.202.125:3306/sgmall?Unicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=UTC
+      username: root
+      password: admin123
+#      password: 991016
+  redis:
+    port: 7001
+    host: 47.113.202.125
+    database: 0
+    password: xiaopengroot123
+
+mybatis:
+  type-aliases-package: com.sxp.entity
+  mapper-locations: classpath:/mappers/*Mapper.xml
+
+#      driver-class-name: com.mysql.jdbc.Driver
+
+redisson:
+  addr:
+    singleAddr:
+      host: redis://47.113.202.125:7001
+      database: 0

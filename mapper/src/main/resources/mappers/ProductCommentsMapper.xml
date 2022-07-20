@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.sxp.dao.ProductCommentsMapper">
+  <resultMap id="BaseResultMap" type="com.sxp.entity.ProductComments">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="comm_id" jdbcType="VARCHAR" property="commId" />
+    <result column="product_id" jdbcType="VARCHAR" property="productId" />
+    <result column="product_name" jdbcType="VARCHAR" property="productName" />
+    <result column="order_item_id" jdbcType="VARCHAR" property="orderItemId" />
+    <result column="user_id" jdbcType="VARCHAR" property="userId" />
+    <result column="is_anonymous" jdbcType="INTEGER" property="isAnonymous" />
+    <result column="comm_type" jdbcType="INTEGER" property="commType" />
+    <result column="comm_level" jdbcType="INTEGER" property="commLevel" />
+    <result column="comm_content" jdbcType="VARCHAR" property="commContent" />
+    <result column="comm_imgs" jdbcType="VARCHAR" property="commImgs" />
+    <result column="sepc_name" jdbcType="TIMESTAMP" property="sepcName" />
+    <result column="reply_status" jdbcType="INTEGER" property="replyStatus" />
+    <result column="reply_content" jdbcType="VARCHAR" property="replyContent" />
+    <result column="reply_time" jdbcType="TIMESTAMP" property="replyTime" />
+    <result column="is_show" jdbcType="INTEGER" property="isShow" />
+  </resultMap>
+
+  <resultMap id="ProductCommentsVoMap" type="com.sxp.entity.ProductCommentsVo">
+    <id column="comm_id" jdbcType="VARCHAR" property="commId" />
+    <result column="product_id" jdbcType="VARCHAR" property="productId" />
+    <result column="product_name" jdbcType="VARCHAR" property="productName" />
+    <result column="order_item_id" jdbcType="VARCHAR" property="orderItemId" />
+    <result column="user_id" jdbcType="VARCHAR" property="userId" />
+    <result column="is_anonymous" jdbcType="INTEGER" property="isAnonymous" />
+    <result column="comm_type" jdbcType="INTEGER" property="commType" />
+    <result column="comm_level" jdbcType="INTEGER" property="commLevel" />
+    <result column="comm_content" jdbcType="VARCHAR" property="commContent" />
+    <result column="comm_imgs" jdbcType="VARCHAR" property="commImgs" />
+    <result column="sepc_name" jdbcType="TIMESTAMP" property="sepcName" />
+    <result column="reply_status" jdbcType="INTEGER" property="replyStatus" />
+    <result column="reply_content" jdbcType="VARCHAR" property="replyContent" />
+    <result column="reply_time" jdbcType="TIMESTAMP" property="replyTime" />
+    <result column="is_show" jdbcType="INTEGER" property="isShow" />
+
+    <result column="username" jdbcType="VARCHAR" property="username" />
+    <result column="user_img" jdbcType="TIMESTAMP" property="userImg" />
+    <result column="nickname" jdbcType="INTEGER" property="nickname" />
+  </resultMap>
+
+  <select id="selectProductCommentVo" resultMap="ProductCommentsVoMap">
+    select
+      p.comm_id,
+      p.product_id,
+      p.product_name,
+      p.order_item_id,
+      p.user_id,
+      p.is_anonymous,
+      p.comm_type,
+      p.comm_level,
+      p.comm_content,
+      p.comm_imgs,
+      p.sepc_name,
+      p.reply_status,
+      p.reply_content,
+      p.reply_time,
+      p.is_show,
+      u.username,
+      u.nickname,
+      u.user_img
+    from product_comments p
+    inner join users u
+    on p.user_id=u.user_id
+    where p.product_id=#{pid}
+    limit #{start},#{pageNum};
+  </select>
+</mapper>

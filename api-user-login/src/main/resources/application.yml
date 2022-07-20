@@ -1,0 +1,41 @@
+#server:
+#  port: 8001
+#
+#spring:
+#  main:
+#    allow-circular-references: true
+#  application:
+#    name: api-user-login
+#  redis:
+#    port: 7001
+#    host: 47.113.202.125
+#    database: 0
+#    password: xiaopengroot123
+#  zipkin:
+#    enabled: true
+#    base-url: http://localhost:9411
+#    sender:
+#      type: web
+#  sleuth:
+#    sampler:
+#      rate: 1
+#eureka:
+#  client:
+#    service-url:
+#      defaultZone: http://root:123@192.168.189.1:8761/eureka
+#feign:
+#  circuitbreaker:
+#    enabled: true
+#  client:
+#    config:
+#      default:
+#        ConnectTimeOut: 1000
+#        MaxAutoRetries: 2
+#        ReadTimeOut: 5000
+
+spring:
+  cloud:
+    config:
+      uri: http://localhost:8888
+      name: api-user-login
+      label: master
